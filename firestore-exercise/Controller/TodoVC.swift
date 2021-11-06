@@ -9,21 +9,47 @@ import UIKit
 
 class TodoVC: UIViewController {
   
+  @IBOutlet weak var newItemTextField: UITextField!
+  
   override func viewDidLoad() {
     super.viewDidLoad()
-    
-    // Do any additional setup after loading the view.
+    newItemTextField.delegate = self
   }
   
   
-  /*
-   // MARK: - Navigation
-   
-   // In a storyboard-based application, you will often want to do a little preparation before navigation
-   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-   // Get the new view controller using segue.destination.
-   // Pass the selected object to the new view controller.
-   }
-   */
+}
+
+extension TodoVC: UITextFieldDelegate{
+  func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+      if textField == newItemTextField {
+        // slide off keyboard
+        newItemTextField.resignFirstResponder()
+        
+        if let task = newItemTextField.text {
+          ToDoAPI.addNewItem(task: task) { error in
+            if error == nil {
+              ToDoAPI.readItems()
+            }
+          }
+        }
+        
+      }
+      return true
+    }
+}
+
+
+extension TodoVC: UITableViewDelegate, UITableViewDataSource{
+  
+  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    <#code#>
+  }
+  
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    <#code#>
+  }
   
 }
+
+
+

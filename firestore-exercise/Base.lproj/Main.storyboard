@@ -93,6 +93,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="ToDo List" id="cFg-FX-OTS"/>
+                    <connections>
+                        <outlet property="newItemTextField" destination="6vG-fX-uEM" id="bfr-cw-ZCw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FPo-sV-u8Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
