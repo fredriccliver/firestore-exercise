@@ -10,10 +10,15 @@
 		0E7851506105AC4DE0D27281 /* Pods_firestore_exercise.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89B79DC031DAA423155709DB /* Pods_firestore_exercise.framework */; };
 		6A17A2162736D6CC004FDE9B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A17A2152736D6CC004FDE9B /* AppDelegate.swift */; };
 		6A17A2182736D6CC004FDE9B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A17A2172736D6CC004FDE9B /* SceneDelegate.swift */; };
-		6A17A21A2736D6CC004FDE9B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A17A2192736D6CC004FDE9B /* ViewController.swift */; };
+		6A17A21A2736D6CC004FDE9B /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A17A2192736D6CC004FDE9B /* LoginVC.swift */; };
 		6A17A21D2736D6CC004FDE9B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A17A21B2736D6CC004FDE9B /* Main.storyboard */; };
 		6A17A21F2736D6CD004FDE9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A17A21E2736D6CD004FDE9B /* Assets.xcassets */; };
 		6A17A2222736D6CD004FDE9B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A17A2202736D6CD004FDE9B /* LaunchScreen.storyboard */; };
+		6A50D5532736DCEA001904CE /* TodoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A50D5522736DCEA001904CE /* TodoVC.swift */; };
+		6A50D5562736DE09001904CE /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A50D5552736DE09001904CE /* MainTabBarController.swift */; };
+		6A50D5592736E4CC001904CE /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A50D5582736E4CC001904CE /* ProfileVC.swift */; };
+		6A50D55C2736E7A4001904CE /* ToDoAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A50D55B2736E7A4001904CE /* ToDoAPI.swift */; };
+		6A50D55F2736E7F2001904CE /* ToDoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A50D55E2736E7F2001904CE /* ToDoItem.swift */; };
 		6AC8D39E2736DA4600C14279 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6AC8D39D2736DA4600C14279 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -22,11 +27,16 @@
 		6A17A2122736D6CC004FDE9B /* firestore-exercise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "firestore-exercise.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A17A2152736D6CC004FDE9B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6A17A2172736D6CC004FDE9B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		6A17A2192736D6CC004FDE9B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6A17A2192736D6CC004FDE9B /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		6A17A21C2736D6CC004FDE9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6A17A21E2736D6CD004FDE9B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6A17A2212736D6CD004FDE9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6A17A2232736D6CD004FDE9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6A50D5522736DCEA001904CE /* TodoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoVC.swift; sourceTree = "<group>"; };
+		6A50D5552736DE09001904CE /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		6A50D5582736E4CC001904CE /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		6A50D55B2736E7A4001904CE /* ToDoAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoAPI.swift; sourceTree = "<group>"; };
+		6A50D55E2736E7F2001904CE /* ToDoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItem.swift; sourceTree = "<group>"; };
 		6AC8D39D2736DA4600C14279 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		89B79DC031DAA423155709DB /* Pods_firestore_exercise.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_firestore_exercise.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E24595A858E38FC0A5AAFE6A /* Pods-firestore-exercise.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-firestore-exercise.debug.xcconfig"; path = "Target Support Files/Pods-firestore-exercise/Pods-firestore-exercise.debug.xcconfig"; sourceTree = "<group>"; };
@@ -82,9 +92,12 @@
 		6A17A2142736D6CC004FDE9B /* firestore-exercise */ = {
 			isa = PBXGroup;
 			children = (
+				6A50D55D2736E7E0001904CE /* Model */,
+				6A50D55A2736E78B001904CE /* API */,
+				6A50D5572736E0D7001904CE /* Controller */,
+				6A50D5542736DCF2001904CE /* View */,
 				6A17A2152736D6CC004FDE9B /* AppDelegate.swift */,
 				6A17A2172736D6CC004FDE9B /* SceneDelegate.swift */,
-				6A17A2192736D6CC004FDE9B /* ViewController.swift */,
 				6A17A21B2736D6CC004FDE9B /* Main.storyboard */,
 				6A17A21E2736D6CD004FDE9B /* Assets.xcassets */,
 				6A17A2202736D6CD004FDE9B /* LaunchScreen.storyboard */,
@@ -92,6 +105,40 @@
 				6AC8D39D2736DA4600C14279 /* GoogleService-Info.plist */,
 			);
 			path = "firestore-exercise";
+			sourceTree = "<group>";
+		};
+		6A50D5542736DCF2001904CE /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6A50D5572736E0D7001904CE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6A17A2192736D6CC004FDE9B /* LoginVC.swift */,
+				6A50D5522736DCEA001904CE /* TodoVC.swift */,
+				6A50D5552736DE09001904CE /* MainTabBarController.swift */,
+				6A50D5582736E4CC001904CE /* ProfileVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		6A50D55A2736E78B001904CE /* API */ = {
+			isa = PBXGroup;
+			children = (
+				6A50D55B2736E7A4001904CE /* ToDoAPI.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		6A50D55D2736E7E0001904CE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6A50D55E2736E7F2001904CE /* ToDoItem.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,8 +257,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6A17A21A2736D6CC004FDE9B /* ViewController.swift in Sources */,
+				6A17A21A2736D6CC004FDE9B /* LoginVC.swift in Sources */,
+				6A50D55C2736E7A4001904CE /* ToDoAPI.swift in Sources */,
 				6A17A2162736D6CC004FDE9B /* AppDelegate.swift in Sources */,
+				6A50D5562736DE09001904CE /* MainTabBarController.swift in Sources */,
+				6A50D5532736DCEA001904CE /* TodoVC.swift in Sources */,
+				6A50D5592736E4CC001904CE /* ProfileVC.swift in Sources */,
+				6A50D55F2736E7F2001904CE /* ToDoItem.swift in Sources */,
 				6A17A2182736D6CC004FDE9B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

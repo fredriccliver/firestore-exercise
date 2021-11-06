@@ -1,24 +1,216 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--LoginVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginVC" customModule="firestore_exercise" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kZw-Z2-wxc">
+                                <rect key="frame" x="133" y="711" width="148.5" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Sign in with Google"/>
+                                <connections>
+                                    <action selector="touchedSignInWithGoogleButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zBQ-V4-XRn"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="kZw-Z2-wxc" secondAttribute="bottom" constant="120" id="2St-fd-pSA"/>
+                            <constraint firstItem="kZw-Z2-wxc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wsZ-CG-aV8"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="122" y="119"/>
+        </scene>
+        <!--ToDo List-->
+        <scene sceneID="Kaa-5A-H3e">
+            <objects>
+                <viewController storyboardIdentifier="todoVC" id="YvE-1U-Ki7" customClass="TodoVC" customModule="firestore_exercise" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TRQ-Yw-49M">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="byG-HM-6ov">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="8BB-rB-52y" userLabel="header view">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="54"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add a new task" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6vG-fX-uEM">
+                                            <rect key="frame" x="8" y="10" width="398" height="34"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="24" id="3Re-KS-qn1"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="6vG-fX-uEM" secondAttribute="trailing" constant="8" id="9BN-rQ-sco"/>
+                                        <constraint firstItem="6vG-fX-uEM" firstAttribute="top" secondItem="8BB-rB-52y" secondAttribute="top" constant="10" id="9pL-uC-1ts"/>
+                                        <constraint firstAttribute="bottom" secondItem="6vG-fX-uEM" secondAttribute="bottom" constant="10" id="Lpm-5N-8Uv"/>
+                                        <constraint firstItem="6vG-fX-uEM" firstAttribute="leading" secondItem="8BB-rB-52y" secondAttribute="leading" constant="8" id="rxh-HO-lEY"/>
+                                    </constraints>
+                                </view>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="86" id="byl-cn-Nll">
+                                        <rect key="frame" x="0.0" y="98.5" width="414" height="86"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="byl-cn-Nll" id="eOC-ut-CC9">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="86"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="JpM-qg-gcv"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="JpM-qg-gcv" firstAttribute="trailing" secondItem="byG-HM-6ov" secondAttribute="trailing" id="32X-fH-ELV"/>
+                            <constraint firstItem="byG-HM-6ov" firstAttribute="top" secondItem="JpM-qg-gcv" secondAttribute="top" id="7kX-bb-o10"/>
+                            <constraint firstItem="JpM-qg-gcv" firstAttribute="bottom" secondItem="byG-HM-6ov" secondAttribute="bottom" id="U0b-9E-JpS"/>
+                            <constraint firstItem="byG-HM-6ov" firstAttribute="leading" secondItem="JpM-qg-gcv" secondAttribute="leading" id="q0h-ad-X8J"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="ToDo List" id="cFg-FX-OTS"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FPo-sV-u8Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1940.5797101449277" y="844.41964285714278"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="IRZ-8n-wnS">
+            <objects>
+                <viewController id="AlT-Lk-Myx" customClass="ProfileVC" customModule="firestore_exercise" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="za3-o5-XOl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ob0-J3-6ML">
+                                <rect key="frame" x="172" y="732" width="70" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Logout">
+                                    <color key="baseForegroundColor" systemColor="systemPinkColor"/>
+                                    <color key="baseBackgroundColor" systemColor="systemPinkColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="touchedLogoutButton:" destination="AlT-Lk-Myx" eventType="touchUpInside" id="qAS-0t-7lR"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yZU-ZW-hji">
+                                <rect key="frame" x="186" y="168" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="p85-Zh-2fe"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="p85-Zh-2fe" firstAttribute="bottom" secondItem="ob0-J3-6ML" secondAttribute="bottom" constant="50" id="Fww-Yz-LHc"/>
+                            <constraint firstItem="ob0-J3-6ML" firstAttribute="centerX" secondItem="za3-o5-XOl" secondAttribute="centerX" id="Hcr-zg-hJO"/>
+                            <constraint firstItem="yZU-ZW-hji" firstAttribute="top" secondItem="p85-Zh-2fe" secondAttribute="top" constant="80" id="R30-Lf-yd3"/>
+                            <constraint firstItem="yZU-ZW-hji" firstAttribute="centerX" secondItem="za3-o5-XOl" secondAttribute="centerX" id="h4J-zu-TjP"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Profile" id="nhi-lR-l7h"/>
+                    <connections>
+                        <outlet property="emailLabel" destination="yZU-ZW-hji" id="Sz9-7Q-8dU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gM0-ZE-HPT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1941" y="1579"/>
+        </scene>
+        <!--Todo-->
+        <scene sceneID="wwU-qw-mDD">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UNF-Ee-3wl" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Todo" image="checkmark.circle" catalog="system" id="Ptw-fI-0pR"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="Shh-Tn-QnM">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="YvE-1U-Ki7" kind="relationship" relationship="rootViewController" id="k44-p8-nWX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hvD-YO-ELx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1032" y="845"/>
+        </scene>
+        <!--Main Tab Bar Controller-->
+        <scene sceneID="8lg-1g-Hah">
+            <objects>
+                <tabBarController storyboardIdentifier="mainTabBarController" automaticallyAdjustsScrollViewInsets="NO" id="heY-y7-4xe" customClass="MainTabBarController" customModule="firestore_exercise" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fjh-4e-tLl">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" name="AccentColor"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="UNF-Ee-3wl" kind="relationship" relationship="viewControllers" id="6OH-SZ-h5z"/>
+                        <segue destination="cFG-Jq-KIR" kind="relationship" relationship="viewControllers" id="b54-bT-fRb"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3YI-Fw-6fz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="122" y="845"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="BRu-sp-O5s">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cFG-Jq-KIR" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Profile" image="person" catalog="system" selectedImage="person" id="eXA-8d-vsT"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="tUh-Ai-s0z">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="AlT-Lk-Myx" kind="relationship" relationship="rootViewController" id="8jq-8z-OiV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q8F-Ho-9XV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1032" y="1579"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="checkmark.circle" catalog="system" width="128" height="121"/>
+        <image name="person" catalog="system" width="128" height="117"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
