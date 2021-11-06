@@ -105,4 +105,4 @@ iOSInjectionProject/
 
 ### Xcode Patch ###
 **/xcshareddata/WorkspaceSettings.xcsettings
-GoogleService-Info.plist
+**/GoogleService-Info.plist
