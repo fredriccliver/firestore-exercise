@@ -7,6 +7,9 @@
 
 import Foundation
 
-struct ToDoItem {
-  
+struct ToDoItem: Codable{
+  var _id:String?
+  var task:String?
+  var owner:String?
 }
+

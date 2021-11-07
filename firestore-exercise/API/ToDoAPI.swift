@@ -7,7 +7,6 @@
 
 import Foundation
 import Firebase
-
 import FirebaseFirestoreSwift
 
 class ToDoAPI {
@@ -29,13 +28,16 @@ class ToDoAPI {
     db.collection("todo").addDocument(data: docData) { err in
       if let err = err {
         print("Error writing document: \(err)")
+        complete(err)
       } else {
         print("Document successfully written!")
+        complete(nil)
       }
+      
     }
   }
   
-  static func readItems(){
+  static func readItems(complete: @escaping (_ todoItems:[ToDoItem]?, _ error:Error?)-> ()){
     
     let db = Firestore.firestore()
     guard let me = Auth.auth().currentUser else{
@@ -46,11 +48,20 @@ class ToDoAPI {
     db.collection("todo").whereField("owner", isEqualTo: me.uid)
       .getDocuments() { (querySnapshot, err) in
         if let err = err {
-          print("Error getting documents: \(err)")
+          complete(nil, NSError(domain: "Couldn't get todo items \(err)", code: 400, userInfo: nil))
         } else {
-          for document in querySnapshot!.documents {
-            print("\(document.documentID) => \(document.data())")
+          
+          let dataDictionary = querySnapshot!.documents.compactMap { queryDocumentSnapshot -> ToDoItem? in
+            
+            var items = try? queryDocumentSnapshot.data(as: ToDoItem.self)
+            items?._id = queryDocumentSnapshot.documentID
+            
+            return items
           }
+          
+          complete(dataDictionary, nil)
+          
+          
         }
       }
     

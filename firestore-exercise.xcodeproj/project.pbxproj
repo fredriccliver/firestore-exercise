@@ -19,6 +19,7 @@
 		6A50D5592736E4CC001904CE /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A50D5582736E4CC001904CE /* ProfileVC.swift */; };
 		6A50D55C2736E7A4001904CE /* ToDoAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A50D55B2736E7A4001904CE /* ToDoAPI.swift */; };
 		6A50D55F2736E7F2001904CE /* ToDoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A50D55E2736E7F2001904CE /* ToDoItem.swift */; };
+		6A50D5612736FA07001904CE /* TodoItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A50D5602736FA07001904CE /* TodoItemTableViewCell.swift */; };
 		6AC8D39E2736DA4600C14279 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6AC8D39D2736DA4600C14279 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,7 @@
 		6A50D5582736E4CC001904CE /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		6A50D55B2736E7A4001904CE /* ToDoAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoAPI.swift; sourceTree = "<group>"; };
 		6A50D55E2736E7F2001904CE /* ToDoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItem.swift; sourceTree = "<group>"; };
+		6A50D5602736FA07001904CE /* TodoItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoItemTableViewCell.swift; sourceTree = "<group>"; };
 		6AC8D39D2736DA4600C14279 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		89B79DC031DAA423155709DB /* Pods_firestore_exercise.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_firestore_exercise.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E24595A858E38FC0A5AAFE6A /* Pods-firestore-exercise.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-firestore-exercise.debug.xcconfig"; path = "Target Support Files/Pods-firestore-exercise/Pods-firestore-exercise.debug.xcconfig"; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				6A50D5522736DCEA001904CE /* TodoVC.swift */,
 				6A50D5552736DE09001904CE /* MainTabBarController.swift */,
 				6A50D5582736E4CC001904CE /* ProfileVC.swift */,
+				6A50D5602736FA07001904CE /* TodoItemTableViewCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			files = (
 				6A17A21A2736D6CC004FDE9B /* LoginVC.swift in Sources */,
 				6A50D55C2736E7A4001904CE /* ToDoAPI.swift in Sources */,
+				6A50D5612736FA07001904CE /* TodoItemTableViewCell.swift in Sources */,
 				6A17A2162736D6CC004FDE9B /* AppDelegate.swift in Sources */,
 				6A50D5562736DE09001904CE /* MainTabBarController.swift in Sources */,
 				6A50D5532736DCEA001904CE /* TodoVC.swift in Sources */,
